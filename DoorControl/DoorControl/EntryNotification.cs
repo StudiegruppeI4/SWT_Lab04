@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 namespace DoorControl
 {
 
-    interface IEntryNotification
+    public interface IEntryNotification
     {
         void NotifyEntryGranted();
         void NotifyEntryDenied();
+
+        bool runSelfTest();
     }
 
-    class EntryNotification : IEntryNotification
+    public class EntryNotification : IEntryNotification
     {
         public void NotifyEntryGranted()
         {
@@ -23,6 +25,11 @@ namespace DoorControl
         public void NotifyEntryDenied()
         {
             Console.WriteLine("Notifying Entry Denied");
+        }
+
+        public bool runSelfTest()
+        {
+            return true;
         }
     }
 }

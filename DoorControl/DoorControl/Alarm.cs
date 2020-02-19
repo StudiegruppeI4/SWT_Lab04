@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DoorControl
 {
-    interface IAlarm
+    public interface IAlarm
     {
         void RaiseAlarm();
         bool runSelfTest();
     }
 
-    class Alarm : IAlarm
+    public class Alarm : IAlarm
     {
         public Alarm() { }
 

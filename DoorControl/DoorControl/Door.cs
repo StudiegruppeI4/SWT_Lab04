@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoorControl
 {
-
-
-
-    interface IDoor
+    public interface IDoor
     {
         void openDoor();
         void closeDoor();
@@ -17,7 +14,7 @@ namespace DoorControl
         bool runSelfTest();
     }
 
-    class Door : IDoor
+    public class Door : IDoor
     {
         public void openDoor()
         {

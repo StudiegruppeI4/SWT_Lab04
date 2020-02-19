@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace DoorControl
 {
-    interface IUserValidation
+    public interface IUserValidation
     {
         bool validateEntryRequest(string validationstring);
         bool runSelfTest();
     }
-    class UserValidation : IUserValidation
+    public class UserValidation : IUserValidation
     {
         UserValidation() { }
         public bool validateEntryRequest(string validationstring)
         {
             if (validationstring == "password")
                 return true;
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
         public bool runSelfTest()
